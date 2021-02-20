@@ -36,6 +36,7 @@ export default {
     modules: [
         '@nuxtjs/apollo',
         '@nuxtjs/dotenv',
+        '@nuxtjs/strapi'
     ],
     apollo: {
         clientConfigs: {
@@ -43,6 +44,12 @@ export default {
                 httpEndpoint: process.env.GRAPHQL_URL || 'http://localhost:1337/graphql'
             }
         }
+    },
+    strapi: {
+        entities: [
+            'members',
+            'galleries',
+        ]
     },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)

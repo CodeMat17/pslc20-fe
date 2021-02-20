@@ -30,7 +30,7 @@
             >
               <div v-if="member.image !== null">
                 <img
-                  :src="strapi_url + member.image.url"
+                  :src="strapi_url+member.image.url"
                   class="object-top object-cover w-full h-64"
                 />
               </div>
