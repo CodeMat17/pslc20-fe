@@ -1,0 +1,14 @@
+query Members {
+    members {
+        name
+        position
+        designation
+        bio
+        linkedin
+        twitter
+        email       
+        image {
+            url
+        }
+    }
+}

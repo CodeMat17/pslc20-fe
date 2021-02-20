@@ -1,0 +1,8 @@
+query Galleries {
+    galleries {
+       title      
+        image {
+            url
+        }
+    }
+}
