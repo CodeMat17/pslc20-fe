@@ -25,7 +25,6 @@
         </div>
         <div class="sm:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2">
           <div v-for="(member, i) in members" :key="i">
-            {{ member.image.url }}
             <div
               class="w-full max-w-xs mx-auto my-4 border rounded-lg overflow-hidden shadow-lg transform transition hover:bg-pink-100 hover:-translate-y-1 hover:shadow-xl"
             >
