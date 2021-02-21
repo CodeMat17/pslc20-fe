@@ -29,10 +29,10 @@
               class="w-full max-w-xs mx-auto my-4 border rounded-lg overflow-hidden shadow-lg transform transition hover:bg-pink-100 hover:-translate-y-1 hover:shadow-xl"
             >
               <div v-if="member.image !== null">
-                <img
+                <!-- <img
                   :src="member.image"
                   class="object-top object-cover w-full h-64"
-                />
+                /> -->
                 <img :src="strapi_url + member.img.url"
                 class="w-full h-64 object-cover object-top"
                  />
