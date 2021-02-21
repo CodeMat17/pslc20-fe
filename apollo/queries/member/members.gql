@@ -8,5 +8,8 @@ query Members {
         twitter
         email       
         image
+        img {
+            url
+        }
     }
 }

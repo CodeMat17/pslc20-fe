@@ -9,7 +9,7 @@
         Gallery is loading... Please wait
       </div>
       <div v-else-if="error" class="text-center mt-32 text-lg tracking-wider">
-        Cannot load gallery now. Please refresh page.
+        Error: Cannot load gallery now. Please refresh page.
       </div>
       <div
         v-else-if="galleries === null"

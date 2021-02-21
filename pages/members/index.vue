@@ -33,6 +33,9 @@
                   :src="member.image"
                   class="object-top object-cover w-full h-64"
                 />
+                <img :src="strapi_url + member.img.url"
+                class="w-full h-64 object-cover object-top"
+                 />
               </div>
               <div class="px-4 py-2">
                 <h1 class="font-semibold text-lg text-gray-900">
@@ -140,6 +143,7 @@ export default {
       members: [],
       query: "",
       error: null,
+      strapi_url: process.env.STRAPI_URL,
     };
   },
   apollo: {
