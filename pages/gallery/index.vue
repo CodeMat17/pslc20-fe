@@ -30,7 +30,7 @@
             >
               <div v-if="gallery.image !== null">
                 <img
-                  :src="strapi_url + gallery.image.url"
+                  :src="gallery.image"
                   class="object-center object-cover w-full h-64"
                 />
               </div>
@@ -75,7 +75,6 @@ export default {
       galleries: [],
       query: "",
       error: null,
-      strapi_url: process.env.STRAPI_URL,
     };
   },
   apollo: {

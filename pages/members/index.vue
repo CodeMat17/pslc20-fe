@@ -30,7 +30,7 @@
             >
               <div v-if="member.image !== null">
                 <img
-                  :src="strapi_url + member.image.url"
+                  :src="member.image"
                   class="object-top object-cover w-full h-64"
                 />
               </div>
@@ -140,7 +140,6 @@ export default {
       members: [],
       query: "",
       error: null,
-      strapi_url: process.env.STRAPI_URL,
     };
   },
   apollo: {
