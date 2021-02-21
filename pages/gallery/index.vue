@@ -6,7 +6,7 @@
         v-if="$apollo.queries.galleries.loading"
         class="text-center mt-32 text-lg tracking-wider"
       >
-        Gallery data loading... Please wait
+        Gallery is loading... Please wait
       </div>
       <div v-else-if="error" class="text-center mt-32 text-lg tracking-wider">
         Cannot load gallery now. Please refresh page.

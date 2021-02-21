@@ -1,4 +1,4 @@
-//require('dotenv').config()
+require('dotenv').config()
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
@@ -25,10 +25,6 @@ export default {
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
-
-    env: {
-        strapiBaseUri: process.env.STRAPI_URL || "http://localhost:1337"
-    },
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
