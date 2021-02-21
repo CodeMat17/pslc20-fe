@@ -7,7 +7,7 @@ query Members {
         linkedin
         twitter
         email       
-        image
+        # image
         img {
             url
         }
