@@ -4,7 +4,7 @@
       v-if="$nuxt.isOffline"
       class="bg-red-200 w-full h-screen flex items-center justify-center"
     >
-      <p class="p-4 tracking-widest text-center text-lg sm:text-xl text-red-500">
+      <p class="p-4 tracking-widest text-center  text-xl sm:text-2xl text-red-500">
         Your internet is off or very poor at the moment. Reconnect and refresh the page.
       </p>
     </div>
