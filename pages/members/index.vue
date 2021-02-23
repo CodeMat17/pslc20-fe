@@ -9,7 +9,7 @@
         Members data loading... Please wait
       </div>
       <div v-else-if="error" class="text-center mt-32 text-lg tracking-wider">
-        Error: Cannot load members now. Please refresh page.
+        Cannot load members now, page is undergoing mantenance. Try again in a few minutes.
       </div>
       <div
         v-else-if="members === null"
@@ -102,7 +102,7 @@
                         </svg>
                       </a>
                     </div>
-                    <div v-if="member.link !== null">                
+                    <div v-if="member.link !== null">      
                       <a
                         :href="member.link"
                         rel="noreferrer"
