@@ -102,7 +102,7 @@
                         </svg>
                       </a>
                     </div>
-                    <!-- <div v-if="member.link !== null">      
+                    <div v-if="member.link !== null">      
                       <a
                         :href="member.link"
                         rel="noreferrer"
@@ -119,7 +119,7 @@
                           />
                         </svg>
                       </a>
-                    </div> -->
+                    </div>
                   </div>
                   <n-link
                     class="bg-pink-500 px-2 py-1 rounded-lg uppercase font-semibold text-gray-100 shadow-xl text-sm tracking-wider"
