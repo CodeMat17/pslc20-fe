@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar class="sticky top-0 z-50" />
-    <div class="px-4 pt-6">
+    <div class="px-4 pt-6 bg-gray-100">
       <div
         v-if="$apollo.queries.galleries.loading"
         class="text-center mt-32 text-lg tracking-wider"
@@ -26,7 +26,7 @@
         <div class="sm:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-2">
           <div v-for="(gallery, i) in galleries" :key="i">
             <div
-              class="w-full max-w-md mx-auto my-4 border rounded-lg overflow-hidden shadow-lg transform transition hover:bg-pink-100 hover:-translate-y-1 hover:shadow-xl"
+              class="bg-white w-full max-w-md mx-auto my-4 border rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 hover:shadow-xl"
             >
               <div v-if="gallery.image !== null">
                 <img

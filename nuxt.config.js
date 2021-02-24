@@ -36,7 +36,8 @@ export default {
     modules: [
         '@nuxtjs/apollo',
         '@nuxtjs/dotenv',
-        '@nuxtjs/strapi'
+        '@nuxtjs/strapi',
+        '@nuxtjs/pwa'
     ],
     apollo: {
         clientConfigs: {
@@ -50,6 +51,61 @@ export default {
             'members',
             'galleries',
         ]
+    },
+
+    pwa: {
+        meta: {
+            title: 'PSLC 20',
+            author: 'Matthew',
+        },
+        manifest: {
+            name: 'PSLC 20',
+            short_name: 'PSLC 20',
+            lang: 'en',
+            display: 'standalone',
+        },
+        workbox: {
+            runtimeCaching: [{
+                    urlPattern: 'https://fonts.googleapis.com/.*',
+                    handler: 'cacheFirst',
+                    method: 'GET',
+                    strategyOptions: { cacheableResponse: { statuses: [0, 200] } },
+                    strategyPlugins: [{
+                        use: 'Expiration',
+                        config: {
+                            maxEntries: 10,
+                            maxAgeSeconds: 300
+                        }
+                    }]
+                },
+                {
+                    urlPattern: 'https://fonts.gstatic.com/.*',
+                    handler: 'cacheFirst',
+                    method: 'GET',
+                    strategyOptions: { cacheableResponse: { statuses: [0, 200] } },
+                    strategyPlugins: [{
+                        use: 'Expiration',
+                        config: {
+                            maxEntries: 10,
+                            maxAgeSeconds: 300
+                        }
+                    }]
+                },
+                {
+                    urlPattern: 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js',
+                    handler: 'cacheFirst',
+                    method: 'GET',
+                    strategyOptions: { cacheableResponse: { statuses: [0, 200] } },
+                    strategyPlugins: [{
+                        use: 'Expiration',
+                        config: {
+                            maxEntries: 10,
+                            maxAgeSeconds: 300
+                        }
+                    }]
+                }
+            ]
+        }
     },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)

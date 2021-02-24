@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar class="sticky top-0 z-50" />
-    <div class="px-4 pt-6">
+    <div class="px-4 pt-6 bg-gray-100">
       <div
         v-if="$apollo.queries.members.loading"
         class="text-center mt-32 text-lg tracking-wider"
@@ -27,7 +27,7 @@
         <div class="sm:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2">
           <div v-for="(member, i) in members" :key="i">
             <div
-              class="w-full max-w-xs mx-auto my-4 border rounded-lg overflow-hidden shadow-lg transform transition hover:bg-pink-100 hover:-translate-y-1 hover:shadow-xl"
+              class=" bg-white w-full max-w-xs mx-auto my-4 border rounded-lg overflow-hidden shadow-xl transform transition hover:-translate-y-2 hover:shadow-2xl"
             >
               <div v-if="member.image !== null">
                 <img
