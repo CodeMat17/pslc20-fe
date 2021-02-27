@@ -9,7 +9,7 @@
         Members data loading... Please wait
       </div>
       <div v-else-if="error" class="text-center mt-32 text-lg tracking-wider">
-        Cannot load members now, page is undergoing mantenance. Try again in a
+        Page is undergoing a minor mantenance. Try again in a
         few minutes.
       </div>
       <div
